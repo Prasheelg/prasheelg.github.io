@@ -1,0 +1,191 @@
+# All page content lives here. Edit this file to update the site.
+
+name: Prasheel G
+role: Product Tech Lead
+tagline: [Engineer, Self-learner, Mentor, Team Player]
+location: Bengaluru, India
+email: prasheel.sg6@gmail.com
+linkedin: prasheel-gopal
+github: prasheelg
+avatar: https://gravatar.com/userimage/245900266/cd652d42afb41280d1600b98208e2232.jpeg?size=256
+
+# Hero
+status: Leading Finacle enhancements at Edgeverve Systems
+headline:
+  before: Product Tech Lead building
+  emphasis: secure, scalable
+  after: banking software.
+lede: >-
+  ~13 years engineering high-data-volume financial systems, from proof-of-concept to production.
+  I lead the team behind enhancements to Finacle, a core banking platform used by 100+ banks worldwide.
+
+# Terminal card in the hero
+profile:
+  - key: role
+    value: Product Tech Lead
+  - key: company
+    value: Edgeverve Systems
+  - key: experience
+    value: ~13 years
+  - key: leading
+    value: 4 years · team of 4
+  - key: domains
+    values: [Core Banking, Telecom OSS]
+  - key: location
+    value: Bengaluru, India
+
+stats:
+  - prefix: "~"
+    value: 13
+    suffix: " yrs"
+    label: In software engineering
+  - value: 4
+    suffix: " yrs"
+    label: Leading an engineering team
+  - value: 100
+    suffix: "+"
+    label: Banks running Finacle
+  - value: 3
+    suffix: "h+"
+    label: Debugging time saved by my log analyzer
+
+# About
+summary:
+  - >-
+    I'm a Product Tech Lead with **~13 years of IT experience**, including **4 years leading engineering teams**,
+    specializing in large-scale, high-data-volume financial services software. At **Edgeverve Systems** I lead
+    enhancements for **Finacle**, owning features end to end, from proof-of-concept through production.
+  - >-
+    My work sits where architecture, security and delivery meet: designing scalable platform features,
+    containerizing enterprise systems, hardening applications against vulnerabilities, and keeping
+    mission-critical banking systems stable in production.
+  - >-
+    I grew from a fresher to a technical lead by taking ownership, learning continuously, and helping the
+    people around me grow.
+
+glance:
+  - label: Current role
+    value: Product Tech Lead, Edgeverve Systems
+  - label: Experience
+    value: ~13 years · 4 years leading a team
+  - label: Domains
+    value: Core banking (Finacle) · Telecom OSS (Vodafone)
+  - label: Strengths
+    value: Security, scalability, production stability
+  - label: Based in
+    value: Bengaluru, India
+
+# Highlights
+highlights:
+  - icon: users
+    title: Analyst to Tech Lead
+    text: Joined Edgeverve as a Technology Analyst and was promoted to lead a team of four developers delivering complex enhancements.
+    featured: true
+  - icon: box
+    title: Dockerized Finacle
+    text: Containerized the Finacle banking system to enable auto-scalability.
+  - icon: terminal
+    title: 3+ hours saved
+    text: Built a custom log analyzer that cut manual debugging time by over 3 hours.
+  - icon: merge
+    title: Legacy migration
+    text: Directed the migration of legacy loan applications onto the in-house banking platform.
+  - icon: globe
+    title: On-site in Dubai
+    text: Supported a nationalized bank on-site, resolving critical production issues.
+  - icon: shield
+    title: Security first
+    text: Identify and fix security vulnerabilities that safeguard sensitive financial data, and design POCs for new security features.
+    wide: true
+
+# Experience
+experience:
+  - company: Edgeverve Systems Ltd
+    role: Product Tech Lead
+    period: Jun 2016 – Present
+    duration: 10+ years
+    progression: [Technology Analyst, Product Tech Lead]
+    summary: >-
+      Leading enhancements for Finacle, a high-data-volume core banking product used by 100+ banks worldwide.
+    groups:
+      - title: Technical Leadership
+        items:
+          - Lead a team of four developers, driving delivery of complex product enhancements
+          - Own end-to-end delivery of Finacle architecture features using JavaScript, Java and shell script
+          - Mentor junior developers in technical skills and product knowledge
+      - title: Architecture & Platform
+        items:
+          - Dockerized the Finacle banking system for auto-scalability
+          - Designed and executed POCs for security features and product enhancements that improved scalability
+          - Delivered multi-browser support, expanding accessibility and compatibility
+          - Directed the migration of legacy loan applications into the in-house banking platform
+      - title: Security & Reliability
+        items:
+          - Identify and fix security vulnerabilities, safeguarding sensitive financial data
+          - Manage production fixes and change requests, ensuring system stability and uptime
+      - title: Productivity & Automation
+        items:
+          - Built a custom log analyzer that reduced manual debugging time by over 3 hours
+          - Bring AI tools into daily workflows for faster coding, debugging and analysis
+      - title: Client Delivery & Quality
+        items:
+          - Provided on-site support for a nationalized bank in Dubai, resolving critical issues
+          - Wrote documentation that helps support teams handle production incidents effectively
+          - Implemented quality practices that improved overall product quality
+
+  - company: Aricent
+    role: Senior Software Engineer
+    period: Oct 2012 – Jun 2016
+    duration: 3 yrs 8 mos
+    progression: [Fresher, Senior Software Engineer]
+    summary: >-
+      Built and supported configuration management software for Vodafone's OSS platform.
+    groups:
+      - title: Engineering & Delivery
+        items:
+          - Developed and supported enhancements to Vodafone OSS's configuration management system, improving operational efficiency
+          - Implemented monitoring tools that improved the deployability and supportability of multiple components
+          - Collaborated with teams across multiple geographies to integrate new features and maintain system stability
+
+# Expertise
+expertise:
+  - icon: layers
+    title: Domain
+    items:
+      - "Banking & financial services: Finacle core banking"
+      - Loan application migration
+      - High-data-volume transaction systems
+      - "Telecom OSS: configuration management & monitoring"
+  - icon: users
+    title: Leadership
+    items:
+      - Team leadership
+      - Stakeholder management
+      - Training & mentoring
+      - Cross-geography collaboration and on-site client delivery
+  - icon: shield
+    title: Engineering Practices
+    items:
+      - Application security and vulnerability remediation
+      - Production support and change management
+      - Proof-of-concept design and scalability improvements
+      - Containerization and AI-assisted development
+
+# Skills
+skills:
+  - group: Backend & Logic
+    items: [Java, Node.js, Python, JSP, PL/SQL, Firebase, Finacle Scripting]
+  - group: Frontend & Web
+    items: [React, AngularJS, JavaScript, HTML5]
+  - group: Cloud & DevOps
+    items: [AWS, Google Cloud Functions, Firebase, Docker]
+  - group: Data & Automation
+    items: [Shell Scripting, Google Apps Script, Linux Systems]
+  - group: Delivery & CI/CD
+    items: [Jira, GitHub, CI/CD Pipelines]
+
+# Contact
+contact:
+  title: Let's build something reliable.
+  text: >-
+    Happy to talk about engineering leadership, core banking platforms, or building secure, scalable systems.

@@ -1,112 +1,22 @@
-# Site
-repository: sproogen/resume-theme
-favicon: images/apple-touch-icon.png
-
-# Content configuration version
-version: 2
-
-# Personal info
-name: Prasheel G
-title: Software Engineer
-email: prasheel.sg6@gmail.com
-
-# Dark Mode (true/false/never)
-darkmode: false
-
-# Social links
-github_username:  prasheelg
-# stackoverflow_username: "00000001"
-# dribbble_username: jekyll
-# facebook_username: jekyll
-# flickr_username: jekyll
-linkedin_username: prasheel-gopal
-# xing_username: jekyll
-# pinterest_username: jekyll
-# googleplus_username: +jekyll
-# orcid_username: 0000-0000-0000-0000
-
-# Additional icon links
-# - title: another link
-#   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&m=free)
-#   url: Link url (eg. https://google.com)
-
-# Google Analytics and Tag Manager
-# Using more than one of these may cause issues with reporting
-# gtm: "GTM-0000000"
-# gtag: "UA-00000000-0"
-# google_analytics: "UA-00000000-0"
-
-# About Section
-about_title: A Glimpse of Prasheel
-about_profile_image: https://gravatar.com/userimage/245900266/cd652d42afb41280d1600b98208e2232.jpeg?size=256
-about_content: | # this will include new lines to allow paragraphs     
-  
-  Prasheel - a Software Developer who loves to code and his daily job is filled with exciting activities.
-  
-  As a change agent, he has taught agility and DevOps to his teams and is involved in exploring ways of teaching and practicing agility, with a unique flavor of his own.  He also is a familiar speaker in Agile and DevOps conferences, with a passion for demo-based interactive talks.
-
-  He is on a learning mission to explore technical agility and possibly, contribute to the field with his own creative twist.  In his leisure time, he can be seen playing badminton.
-
-content:
-  - title: Books # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: left
-        title: Metrics for Agile Product Teams
-        link: https://amzn.to/3jrkNf6
-        # link_text: boringcompany.com
-        sub_title: Illustrated Handbook of Do's and Don'ts
-        description: | # this will include new lines to allow paragraphs
-            Is creating awesome software products your team's goal? Do you see no meaningful outcomes even when all the charts are green? Do you want to know what to measure and what not to measure? If yes, this illustrated handbook is for you.
-
-            This book will guide you to define meaningful metrics right from the stage of forecasting up to even after the product hits the market.
-
-          #![book](https://m.media-amazon.com/images/I/41vALQL8PCL.jpg "Book")
-            
-      - layout: left
-        title: TDD for Spring Boot REST Microservices 
-        link: https://amzn.to/3BwItHu
-        # link_text: boringcompany.com
-        sub_title: A step by step blueprint for the confused souls
-        description: | # this will include new lines to allow paragraphs
-            It is very easy to understand the ‘red-green-refactor’ definition from Wikipedia or by watching some Youtube videos to parrot the definition of Test Driven Development. However, to apply that understanding in practice for a real-life project, you need more specific knowledge than just ‘red-green-refactor’. This book intends to develop the specific expertise you can apply in the context of building Spring Boot REST microservices.
-        
-            Spring Boot’s authors went to great lengths to make TDD super easy so that developers can create well-designed and robust microservices with confidence. This book will help you uncover some of the hidden tools (not so much hidden as much as ignored by the masses) in the Spring Boot framework that can make your TDD practice productive and efficient. Also, this book will help you practice these concepts step-by-step in an example project using an easy-to-follow blueprint
-
-          #![book](  https://m.media-amazon.com/images/I/41MLajnSaGL.jpg "Book")
-
-  - title: Blogs
-    layout: text
-    content: | # this will include new lines to allow paragraphs
-      - [Pick A Question - A Remote Retrospective](https://medium.com/@kiran.kashyap.ds/pick-a-question-a-remote-retrospective-a7c1e2f0b30a) -  In this retrospective, the team would be presented with a series of closed question cards. Each member will randomly choose a question to open and answer.
-      - [How to be a Despicable Scrum Master?](https://medium.com/@kiran.kashyap.ds/how-to-be-a-despicable-scrum-master-b42de25b6661) - Well, some people may not be fans of you when you do the right thing. That does not mean people will love you when you do the wrong thing. This is precisely what we are going to discuss here. Here are few ways you can make people hate you as a Scrum Master.
-      - [Crafting a True Pull System using Kanban Board](https://medium.com/@kiran.kashyap.ds/crafting-a-true-pull-system-using-kanban-board-7775d87b82b8) - Crafting a True Pull System using Kanban Board.
-      - [The Happiness Curve Retrospective for Distributed Teams](https://medium.com/@kiran.kashyap.ds/the-happiness-curve-retrospective-for-distributed-teams-f8cdc8987805) - This blog post is a narration of how I prepared for the retrospective, how I ran it and how it turned out. So, if this is your kind of stuff, read on!
-      - [Scrum Master Interview Questions: Advanced](https://medium.com/@kiran.kashyap.ds/scrum-master-interview-questions-advanced-14c574282aef) - In this write-up I will try to share some of the tricky questions you can expect in scrum master interviews. I have excluded many of the basic Scrum Master interview questions.
-
-  - title: Past Conference Talks
-    layout: text
-    content: | # this will include new lines to allow paragraphs
-      - [Agile Idia 2021](https://2021.agileindia.org/speakers/)
-      - [XP 2019 Canada](https://submissions.agilealliance.org/xp2019/sessions)
-      - [Agile India 2020](https://confengine.com/agile-india-2020/proposals)
-      - [World DevOps Summit 2019](http://www.unicomlearning.com/World_Devops_Summit_2019/)
-      - [Regional Scrum Gathering 2020](https://confengine.com/regional-scrum-gathering-hyderabad-2020/speaker)
-      - [Regional Scrum Gathering 2019](https://confengine.com/user/kiran-kashyap)
-      - [Agile NCR 2019](https://agilencr.org/paper-submissions-5/)
-      - [NextGen DevOps Conference Bengaluru]() 
-      
-
-# Footer
-footer_show_references: true
-# references_title: References on request (Override references text)
-
-# Build settings
-remote_theme: sproogen/resume-theme
-
-sass:
-  sass_dir: _sass
-  style: compressed
+# Site settings. Page content lives in _data/resume.yml.
+title: Prasheel G
+tagline: Product Tech Lead | Full-Stack Engineer
+description: Prasheel G – Product Tech Lead and Full-Stack Engineer with ~13 years of experience building and securing large-scale core banking software.
+url: https://prasheelg.github.io
+baseurl: ""
+lang: en
+author:
+  name: Prasheel G
+social:
+  name: Prasheel G
+  links:
+    - https://www.linkedin.com/in/prasheel-gopal
+    - https://github.com/prasheelg
 
 plugins:
- - jekyll-seo-tag
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

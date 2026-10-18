@@ -1,0 +1,201 @@
+---
+layout: default
+---
+{%- assign r = site.data.resume -%}
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="status"><span class="status-dot" aria-hidden="true"></span>{{ r.status }}</p>
+      <h1 id="hero-title">
+        <span class="hero-name">{{ r.name }}</span>
+        <span class="hero-headline">{{ r.headline.before }} <em>{{ r.headline.emphasis }}</em> {{ r.headline.after }}</span>
+      </h1>
+      <p class="lede">{{ r.lede }}</p>
+      <ul class="tagline" role="list">
+        {%- for t in r.tagline %}<li>{{ t }}</li>{% endfor -%}
+      </ul>
+      <div class="ctas">
+        <a class="btn btn-primary" href="#contact">Get in touch {% include icon.html name="arrow" %}</a>
+        <a class="btn btn-ghost" href="#experience">View experience</a>
+        <button class="btn btn-ghost print-btn" type="button" data-print>{% include icon.html name="printer" %} Save as PDF</button>
+      </div>
+    </div>
+
+    <div class="terminal" role="img" aria-label="Profile summary: {% for f in r.profile %}{{ f.key }} {{ f.value }}{{ f.values | join: ', ' }}{% unless forloop.last %}; {% endunless %}{% endfor %}">
+      <div class="term-bar" aria-hidden="true">
+        <span></span><span></span><span></span>
+        <p>~/prasheel — profile.json</p>
+      </div>
+      <pre class="term-body" aria-hidden="true"><code><span class="t-prompt">~/prasheel</span> <span class="t-dim">$</span> cat profile.json
+<span class="t-punc">{</span>
+{%- for f in r.profile %}
+  <span class="t-key">"{{ f.key }}"</span><span class="t-punc">:</span> {% if f.values %}<span class="t-punc">[</span>{% for v in f.values %}<span class="t-str">"{{ v }}"</span>{% unless forloop.last %}<span class="t-punc">, </span>{% endunless %}{% endfor %}<span class="t-punc">]</span>{% else %}<span class="t-str">"{{ f.value }}"</span>{% endif %}{% unless forloop.last %}<span class="t-punc">,</span>{% endunless %}
+{%- endfor %}
+<span class="t-punc">}</span>
+<span class="t-prompt">~/prasheel</span> <span class="t-dim">$</span> <span class="cursor"></span></code></pre>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <dl class="stats">
+      {%- for s in r.stats %}
+      <div class="stat reveal">
+        <dt>{{ s.label }}</dt>
+        <dd>{{ s.prefix }}<span data-count="{{ s.value }}">{{ s.value }}</span>{{ s.suffix }}</dd>
+      </div>
+      {%- endfor %}
+    </dl>
+  </div>
+</section>
+
+<section class="section" id="about" aria-labelledby="about-title">
+  <div class="wrap about-grid">
+    <div class="about-copy reveal">
+      <p class="eyebrow">01 / About</p>
+      <h2 id="about-title">Professional summary</h2>
+      {%- for p in r.summary %}
+      {{ p | markdownify }}
+      {%- endfor %}
+    </div>
+    <aside class="glance reveal" aria-labelledby="glance-title">
+      <div class="glance-head">
+        <img class="avatar" src="{{ r.avatar }}" alt="Portrait of {{ r.name }}" width="64" height="64" loading="lazy">
+        <div>
+          <h3 id="glance-title">At a glance</h3>
+          <p class="glance-loc">{% include icon.html name="pin" %} {{ r.location }}</p>
+        </div>
+      </div>
+      <dl>
+        {%- for g in r.glance %}
+        <div>
+          <dt>{{ g.label }}</dt>
+          <dd>{{ g.value }}</dd>
+        </div>
+        {%- endfor %}
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="section section-alt" id="highlights" aria-labelledby="highlights-title">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <p class="eyebrow">02 / Highlights</p>
+      <h2 id="highlights-title">Impact I've delivered</h2>
+    </header>
+    <ul class="bento" role="list">
+      {%- for h in r.highlights %}
+      <li class="tile reveal{% if h.featured %} tile-featured{% endif %}{% if h.wide %} tile-wide{% endif %}">
+        <span class="tile-icon">{% include icon.html name=h.icon %}</span>
+        <h3>{{ h.title }}</h3>
+        <p>{{ h.text }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="experience" aria-labelledby="experience-title">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <p class="eyebrow">03 / Experience</p>
+      <h2 id="experience-title">Where I've worked</h2>
+    </header>
+    <ol class="timeline" role="list">
+      {%- for job in r.experience %}
+      <li class="job reveal">
+        <div class="job-meta">
+          <p class="job-period">{{ job.period }}</p>
+          <p class="job-duration">{{ job.duration }}</p>
+        </div>
+        <article class="job-card">
+          <header class="job-head">
+            <div>
+              <h3>{{ job.role }}</h3>
+              <p class="job-company">{{ job.company }}</p>
+            </div>
+            {%- if job.progression %}
+            <p class="progression" aria-label="Career progression: {{ job.progression | join: ' to ' }}">
+              {%- for step in job.progression -%}
+              <span>{{ step }}</span>{% unless forloop.last %}{% include icon.html name="arrow" %}{% endunless %}
+              {%- endfor -%}
+            </p>
+            {%- endif %}
+          </header>
+          <p class="job-summary">{{ job.summary }}</p>
+          <div class="job-groups{% if job.groups.size == 1 %} job-groups-single{% endif %}">
+            {%- for g in job.groups %}
+            <div class="job-group">
+              <h4>{{ g.title }}</h4>
+              <ul>
+                {%- for item in g.items %}
+                <li>{{ item }}</li>
+                {%- endfor %}
+              </ul>
+            </div>
+            {%- endfor %}
+          </div>
+        </article>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section section-alt" id="expertise" aria-labelledby="expertise-title">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <p class="eyebrow">04 / Expertise</p>
+      <h2 id="expertise-title">What I bring to a team</h2>
+    </header>
+    <div class="cards-3">
+      {%- for e in r.expertise %}
+      <div class="card reveal">
+        <span class="tile-icon">{% include icon.html name=e.icon %}</span>
+        <h3>{{ e.title }}</h3>
+        <ul class="checks">
+          {%- for item in e.items %}
+          <li>{{ item }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="skills" aria-labelledby="skills-title">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <p class="eyebrow">05 / Skills</p>
+      <h2 id="skills-title">Tech &amp; tools</h2>
+    </header>
+    <div class="skills">
+      {%- for s in r.skills %}
+      <div class="skill-row reveal">
+        <h3>{{ s.group }}</h3>
+        <ul class="tags" role="list">
+          {%- for item in s.items %}<li>{{ item }}</li>{% endfor -%}
+        </ul>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="contact reveal">
+      <p class="eyebrow">06 / Contact</p>
+      <h2 id="contact-title">{{ r.contact.title }}</h2>
+      <p>{{ r.contact.text }}</p>
+      <div class="ctas">
+        <a class="btn btn-light" href="mailto:{{ r.email }}">{% include icon.html name="mail" %} {{ r.email }}</a>
+        <a class="btn btn-outline-light" href="https://www.linkedin.com/in/{{ r.linkedin }}" target="_blank" rel="noopener">{% include icon.html name="linkedin" %} LinkedIn</a>
+        <a class="btn btn-outline-light" href="https://github.com/{{ r.github }}" target="_blank" rel="noopener">{% include icon.html name="github" %} GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
